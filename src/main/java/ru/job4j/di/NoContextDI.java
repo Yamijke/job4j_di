@@ -1,14 +1,14 @@
 package ru.job4j.di;
 
-import ru.job4j.di.di.ConsoleInput;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import ru.job4j.di.di.StartUI;
-import ru.job4j.di.di.Store;
 
 public class NoContextDI {
     public static void main(String[] args) {
-        Store store = new Store();
-        ConsoleInput consoleInput = new ConsoleInput();
-        StartUI ui = new StartUI(store, consoleInput);
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
+        context.scan("ru.job4j.di.di");
+        context.refresh();
+        StartUI ui = context.getBean(StartUI.class);
         ui.add("Petr Arsentev");
         ui.add("Ivan ivanov");
         ui.print();
