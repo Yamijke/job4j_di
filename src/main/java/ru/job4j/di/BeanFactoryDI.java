@@ -3,6 +3,8 @@ package ru.job4j.di;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.support.BeanDefinitionBuilder;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
+import ru.job4j.di.di.StartUI;
+import ru.job4j.di.di.Store;
 
 public class BeanFactoryDI {
     public static void main(String[] args) {

@@ -1,6 +1,8 @@
 package ru.job4j.di;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import ru.job4j.di.di.StartUI;
+import ru.job4j.di.di.Store;
 
 public class ContextByListOfClasses {
     public static void main(String[] args) {
